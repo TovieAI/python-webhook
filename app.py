@@ -11,9 +11,9 @@ app.debug = True
 @app.route('/', methods=['POST', 'GET'])
 def request_handler():
     if request.method == 'GET':
-        href = '<a href="http://aimylogic.com" ' \
-               'target="_blank">aimylogic.com</a> '
-        more = '<a href="https://github.com/aimylogic/python-webhook" ' \
+        href = '<a href="" ' \
+               'target="_blank"></a> '
+        more = '<a href="https://github.com/TovieAI/python-webhook" ' \
                'target="_blank">More</a> '
 
         return f'<p>Copy this URL and paste it in your bot settings.' \
@@ -24,10 +24,10 @@ def request_handler():
     return webhook(session), 200
 
 def run():
-    print(' * Use ngrok to tunnel your localhost to Aimylogic.'
+    print(' * Use ngrok to tunnel your localhost to Tovie DialogStudio.'
           '\n * ./ngrok http 5000 || ngrok.exe http 5000 (windows)'
           '\n * This will generate temporary URL in terminal.  Copy it and paste into the field named "Webhook for tests" in your bot\'s settings. '
-          'All requests to your webhook will go to your local machine while you test your bot scenario via a test widget on Aimylogic.')
+          'All requests to your webhook will go to your local machine while you test your bot scenario via a test widget on Tovie DialogStudio.')
     app.run(host='0.0.0.0', port=5000)
 
 
